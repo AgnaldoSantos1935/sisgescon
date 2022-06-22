@@ -256,9 +256,9 @@ return [
         ['header' => 'Options available'],
         [
             'text' => 'contracts and agreements',
-            'url'  => '#',
-            'icon' => 'fas fa-fw fa-user',
-        ],
+            'url'  => '/contratos',
+            'icon' => 'fas fa-fw fa-lock',
+        ], 
         [
             'text' => 'Human Resources',
             'url'  => '#',
@@ -338,7 +338,7 @@ return [
         ],
 
 
-        ['header' => 'labels'],
+    /*    ['header' => 'labels'],
         [
             'text'       => 'important',
             'icon_color' => 'red',
@@ -353,7 +353,7 @@ return [
             'text'       => 'information',
             'icon_color' => 'cyan',
             'url'        => '#',
-        ],
+        ], */
     ],
 
     /*
