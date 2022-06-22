@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Sisge || Home')
 
 @section('content_header')
     <h1>Dashboard</h1>
@@ -11,7 +11,7 @@
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
+    <link rel="stylesheet" href="{{ asset ('css/app.css')}}">
 @stop
 
 @section('js')

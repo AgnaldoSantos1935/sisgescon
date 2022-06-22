@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Site sisge</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -12,14 +12,14 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="{{asset('/vendor/adminlte/dist/css/style.css')}}">
+  <link rel="stylesheet" href="{{asset('css/style.css')}}">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body class="antialiased">
     <div class="header">
   <a href="#default" class="logo">Sigesco</a>
   <div class="header-right">
-    <a class="active" href="#home">Ouvidoria/Fale conosco</a>
+    <a  href="#home">Ouvidoria/Fale conosco</a>
     <a href="#contact">Transparência</a>
     <a href="#about">Contatos</a>
   </div>
@@ -31,8 +31,8 @@
     </div>
     <ul class="nav navbar-nav">
     <li class="active"><a href="#">Home</a></li>
-    <li class="active"><a href="#">Organograma</a></li>
-      <li class="active"><a href="#">Institucional</a></li>
+    <li ><a href="#">Organograma</a></li>
+      <li ><a href="#">Institucional</a></li>
       <li><a href="#">Secretarias</a></li>
       <li><a href="#">Serviços on line</a></li>
       <li><a href="#">Editais/Licitações</a></li>
