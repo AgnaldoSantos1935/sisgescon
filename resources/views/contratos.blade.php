@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<table class="table table-striped table-bordered table-hover" id="contratos_list">
+<table id="tabela" class="table table-bordered table-hover"  style="width:100%">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -29,55 +29,55 @@
                         <td>
  
                             <!-- show the nerd (uses the show method found at GET /nerds/{id} -->
-                            <a class="btn btn-small btn-success" href="{{ URL::to('employee/' . $emp->id) }}">Show</a>
- 
+                            <a class="btn btn-primary" id="btn_table1" href="{{ URL::to('contratos_detalhes/' . $emp->id) }}" role="button">Detalhes</a>
+                                
                             <!-- edit this nerd (uses the edit method found at GET /nerds/{id}/edit -->
-                            <a class="btn btn-small btn-info" href="{{ URL::to('employee/' . $emp->id . '/edit')}}">Edit</a>
- 
+                            <a class="btn btn-primary" id="btn_table2" href="{{ URL::to('contratos_novo/' . $emp->id . '/editar')}}" role="button"> Editar </a>
+                            
                         </td>
                     </tr>
                 @endforeach
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th>contratada</th>
+                        <th>cnpjcontratada</th>
+                        <th>numero</th>
+                        <th>ano</th>
+                    </tr>
+                </tfoot>
             </table>
 
 
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset ('css/app.css')}}">
+    
+    
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="{{url(mix ('css/app.css'))}}">
+    
 @stop
 
 @section('js')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>  
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
 <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+
+<script type="text/javascript" src="{{url(mix('js/app.js'))}}"></script>  
+<script type="text/javascript" src="{{url(mix('js/jquery.js'))}}"></script>
 <script type="text/javascript">
-  $(function () {
-    
-    var table = $('contratos_list').DataTable({
-        processing: true,
-        serverSide: true,
-        
-        columns: [
-            {data: 'DT_RowIndex', name: 'DT_RowIndex'},
-            {data: 'name', name: 'name'},
-            {data: 'email', name: 'email'},
-            {data: 'username', name: 'username'},
-            {data: 'phone', name: 'phone'},
-            {data: 'dob', name: 'dob'},
-            {
-                data: 'action', 
-                name: 'action', 
-                orderable: true, 
-                searchable: true
-            },
-        ]
+$(function () {
+    $('#tabela').DataTable({
+        pagingType: 'full_numbers',
     });
-    
-  });
+});
+
+
 </script>
 @stop

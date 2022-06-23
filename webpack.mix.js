@@ -1,4 +1,4 @@
-const mix = require('laravel-mix');
+let mix = require('laravel-mix');
 
 /*
  |--------------------------------------------------------------------------
@@ -11,12 +11,20 @@ const mix = require('laravel-mix');
  |
  */
 
-/*const mix .js('resources/js/app.js', 'public/js')
- .vue()
- .sass('resources/sass/app.scss', 'public/css')
- ('node_modules/bootstrap/dist/css/bootstrap.s','public/css');
+ mix.styles([
+    'resources/css/normalize.css', 'resources/css/app.css','resources/css/style.css'
+],'public/css/app.css')
+     
+.styles(['node_modules/bootstrap/dist/css/bootstrap.css' 
+],'public/css/bootstrap.css')
+        .scripts([
+                'resources/js/app.js',
+                'resources/js/app.js',
+                ],'public/js/app.js')
+        .scripts([
+                    'node_modules/jquery/dist/jquery.js'
+                    ],'public/js/jquery.js')
 
-.scripts('node_modules/jquery/dist/jquery.js','public/site/jquery.js')
-.scripts('node_modules/bootstrap/dist/js/bootstrap.bundle.js','public/site/bootstrap.js'); */
- mix.js('resources/js/app.js', 'public/js')
- .sass('resources/sass/app.scss', 'public/css');
+.version();
+
+ 
