@@ -53,31 +53,18 @@
 @stop
 
 @section('css')
+<link rel="stylesheet" href="vendor/fontawesome-free/css/fontawesome.css">
+
+<link rel="stylesheet" href="vendor/datatables/css/dataTables.bootstrap4.css">
     
-    
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="{{url(mix ('css/app.css'))}}">
     
 @stop
 
 @section('js')
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>  
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
-<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
-
+<Script type="text/javascript" src="vendor/jquery/jquery.js"></Script>
+<Script type="text/javascript" src="vendor/bootstrap/js/bootstrap.js"></Script>
+<Script type="text/javascript" src="vendor/datatables/js/jquery.dataTables.js"></Script>
+<Script type="text/javascript" src="vendor/datatables/js/dataTables.bootstrap4.js"></Script>
 <script type="text/javascript" src="{{url(mix('js/app.js'))}}"></script>  
-<script type="text/javascript" src="{{url(mix('js/jquery.js'))}}"></script>
-<script type="text/javascript">
-$(function () {
-    $('#tabela').DataTable({
-        pagingType: 'full_numbers',
-    });
-});
-
-
-</script>
 @stop

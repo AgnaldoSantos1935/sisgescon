@@ -18,6 +18,6 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/contratos', [App\Http\controllers\ContratoController::class,'index'])->name('contratos');
+Route::get('/addcontratos', [App\Http\controllers\ContratoController::class,'create'])->name('addcontratos');

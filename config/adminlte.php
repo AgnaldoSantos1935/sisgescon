@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'Sisgesco',
+    'title' => 'AdminLTE 3',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -45,8 +45,8 @@ return [
     |
     */
 
-    'logo' => '<b>Sigesco</b>',
-    'logo_img' => 'vendor/adminlte/dist/img/logomarca_teste.png',
+    'logo' => '<b>Admin</b>LTE',
+    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -239,41 +239,70 @@ return [
         // Sidebar items:
         [
             'type' => 'sidebar-menu-search',
-            'text' => 'Pesquisar',
+            'text' => 'search',
+
         ],
         [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
+            'text' => 'home',
+            'url'  => '/home',
+            'icon'=> 'fas fa-fw fa-home',
         ],
-       /* [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ], */
-        ['header' => 'Options available'],
         [
             'text' => 'contracts and agreements',
             'url'  => '/contratos',
-            'icon' => 'fas fa-fw fa-lock',
-        ], 
+            'icon'=> 'far fa-fw fa-file',
+            'submenu' => [
+                [
+                    'text' => 'view all contracts',
+                    'url'  => '/contratos',
+                    'icon'=> 'fa solid fa-border-all',
+                ],
+                [
+                    'text' => 'include',
+                    'url'  => 'addcontratos',
+                    'icon'=> 'fas -solid fa-plus',
+                ],
+                [
+                    'text' => 'Outra 2',
+                    'url'  => '#',
+                    'icon'=> 'fas -solid fa-plus',
+                ],
+                [
+                    'text' => 'Outra 3',
+                    'url'  => '#',
+                    'icon'=> 'fas -solid fa-plus',
+                ],
+
+            ]
+        ],
         [
-            'text' => 'Human Resources',
-            'url'  => '#',
+            'text'        => 'per diems and tickets',
+            'url'         => '#',
+            'icon'        => 'far fa-fw fa-file',
+            'label'       => 4,
+            'label_color' => 'success',
+        ],
+        ['header' => 'Material resources and heritage'],
+        [
+            'text' => 'profile',
+            'url'  => 'admin/settings',
+            'icon' => '',
+        ],
+        [
+            'text' => 'change_password',
+            'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
-            'text'    => 'Material resources and heritage',
+            'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'inventory',
+                    'text' => 'level_one',
                     'url'  => '#',
                 ],
                 [
-                    'text'    => 'alienation',
+                    'text'    => 'level_one',
                     'url'     => '#',
                     'submenu' => [
                         [
@@ -302,43 +331,7 @@ return [
                 ],
             ],
         ],
-        [
-            'text'    => 'per diems and tickets',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'inventory',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'alienation',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-            ],
-        ],
-
-
-    /*    ['header' => 'labels'],
+        ['header' => 'labels'],
         [
             'text'       => 'important',
             'icon_color' => 'red',
@@ -353,7 +346,7 @@ return [
             'text'       => 'information',
             'icon_color' => 'cyan',
             'url'        => '#',
-        ], */
+        ],
     ],
 
     /*
@@ -392,21 +385,21 @@ return [
 
     'plugins' => [
         'Datatables' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
-                    'asset' => false,
+                    'asset' => true,
                     'location' => '//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js',
                 ],
                 [
                     'type' => 'js',
-                    'asset' => false,
+                    'asset' => true,
                     'location' => '//cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js',
                 ],
                 [
                     'type' => 'css',
-                    'asset' => false,
+                    'asset' => true,
                     'location' => '//cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css',
                 ],
             ],
