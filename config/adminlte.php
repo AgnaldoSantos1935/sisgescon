@@ -254,29 +254,13 @@ return [
             'submenu' => [
                 [
                     'text' => 'Adicionar ',
-                    'url'  => '/addcontrato',
+                    'url'  => 'incluircontrato',
                     'icon' => 'fas solid fa-plus',
                 ],
-        ]], 
-        [
-            'text' => 'Human Resources',
-            'url'  => '#',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'Material resources and heritage',
-            'icon'    => 'fas fa-fw fa-share',
-            'icon'=> 'far fa-fw fa-file',
-            'submenu' => [
                 [
                     'text' => 'view all contracts',
-                    'url'  => '/contratos',
+                    'url'  => 'contratos',
                     'icon'=> 'fa solid fa-border-all',
-                ],
-                [
-                    'text' => 'include',
-                    'url'  => 'addcontratos',
-                    'icon'=> 'fas -solid fa-plus',
                 ],
                 [
                     'text' => 'Outra 2',
@@ -289,8 +273,45 @@ return [
                     'icon'=> 'fas -solid fa-plus',
                 ],
 
+        ]
+    ], // Final do menu contratos
+        [
+            'text' => 'Human Resources',
+            'url'  => '#',
+            'icon' => 'fas fa-fw fa-lock',
+            'submenu' => [
+                [
+                    'text' => 'Adicionar ',
+                    'url'  => 'incluircontrato',
+                    'icon' => 'fas solid fa-plus',
+                ],
+                [
+                    'text' => 'view all employes',
+                    'url'  => 'funcionarios',
+                    'icon'=> 'fa solid fa-border-all',
+                ],
+        ] 
+
+        ], // Final do menu recursos humanos
+        [
+            'text'    => 'Material resources and heritage',
+            'icon'    => 'fas fa-fw fa-share',
+            'icon'=> 'far fa-fw fa-file',
+            'submenu' => [
+               
+                [
+                    'text' => 'include',
+                    'url'  => '#',
+                    'icon'=> 'fas -solid fa-plus',
+                ],
+                [
+                    'text' => 'view_all_material_resources',
+                    'url'  => '#',
+                    'icon'=> 'fas -solid fa-plus',
+                ],
+               
             ]
-        ],
+        ],// Final do menu recursos materiais e patrimônio
         [
             'text'        => 'per diems and tickets',
             'url'         => '#',

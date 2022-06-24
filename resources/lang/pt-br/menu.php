@@ -13,6 +13,8 @@ return [
     'Material resources and heritage' => 'Recursos Materiais e Patrimônio',
     'home'                           =>'Início',
     'inventory'                     => 'Inventário',
+	'view all employes'            => 'Exibir funcionários',
+	'view_all_material_resources' => 'Exibir patrimônio',
     'include'                     => 'Incluir',
     'alienation'                     =>'Alienação',
     'per diems and tickets'          =>'Diárias e Passagens',      

@@ -26,18 +26,10 @@ class ContratoController extends Controller
      */
     public function create()
     {
-<<<<<<< HEAD
-        return view('addcontrato'); //chama a visão CONTRATOS
-=======
-        return view('incluirctt');
+        return view('incluirctt'); //chama a visão CONTRATOS        
     }
->>>>>>> 4ac2aa3950361524b8e72a782be8f2740506cc84
 
-    }
-    public function contato() {
-        return View::make('pages.contato');
-       }
-     
+
     /**
      * Store a newly created resource in storage.
      *

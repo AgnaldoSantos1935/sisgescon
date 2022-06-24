@@ -18,7 +18,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                @foreach($contratos as $key => $emp)
+                @foreach($funcionarios as $key => $emp)
                     <tr>
                         <td>{{ $emp->id }}</td>
                         <td>{{ $emp->contratada }}</td>
