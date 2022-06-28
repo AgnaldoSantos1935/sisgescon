@@ -56,9 +56,7 @@
 <link rel="stylesheet" href="vendor/fontawesome-free/css/fontawesome.css">
 
 <link rel="stylesheet" href="vendor/datatables/css/dataTables.bootstrap4.css">
-    
- 
-    
+        
 @stop
 
 @section('js')

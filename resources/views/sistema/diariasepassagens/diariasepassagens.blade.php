@@ -18,7 +18,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                @foreach($patrimonios as $key => $emp)
+                @foreach($contratos as $key => $emp)
                     <tr>
                         <td>{{ $emp->id }}</td>
                         <td>{{ $emp->contratada }}</td>
@@ -56,7 +56,9 @@
 <link rel="stylesheet" href="vendor/fontawesome-free/css/fontawesome.css">
 
 <link rel="stylesheet" href="vendor/datatables/css/dataTables.bootstrap4.css">
-        
+    
+ 
+    
 @stop
 
 @section('js')

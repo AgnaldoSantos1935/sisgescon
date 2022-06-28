@@ -11,9 +11,16 @@
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset ('css/app.css')}}">
+<link rel="stylesheet" href="vendor/fontawesome-free/css/fontawesome.css">
+
+<link rel="stylesheet" href="vendor/datatables/css/dataTables.bootstrap4.css">
+        
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+<Script type="text/javascript" src="vendor/jquery/jquery.js"></Script>
+<Script type="text/javascript" src="vendor/bootstrap/js/bootstrap.js"></Script>
+<Script type="text/javascript" src="vendor/datatables/js/jquery.dataTables.js"></Script>
+<Script type="text/javascript" src="vendor/datatables/js/dataTables.bootstrap4.js"></Script>
+
 @stop

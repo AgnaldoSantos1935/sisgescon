@@ -65,8 +65,8 @@ return [
     */
 
     'usermenu_enabled' => true,
-    'usermenu_header' => false,
-    'usermenu_header_class' => 'bg-primary',
+    'usermenu_header' => true,
+    'usermenu_header_class' => 'bg-teal',
     'usermenu_image' => false,
     'usermenu_desc' => false,
     'usermenu_profile_url' => false,
@@ -87,7 +87,7 @@ return [
     'layout_boxed' => null,
     'layout_fixed_sidebar' => null,
     'layout_fixed_navbar' => null,
-    'layout_fixed_footer' => null,
+    'layout_fixed_footer' => true,
     'layout_dark_mode' => null,
 
     /*
@@ -107,7 +107,7 @@ return [
     'classes_auth_body' => '',
     'classes_auth_footer' => '',
     'classes_auth_icon' => '',
-    'classes_auth_btn' => 'btn-flat btn-primary',
+    'classes_auth_btn' => 'btn-flat btn-teal',
 
     /*
     |--------------------------------------------------------------------------
@@ -127,8 +127,9 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
-    'classes_sidebar_nav' => '',
+    'classes_sidebar' => 'elevation-4 sidebar-dark-teal',
+ 
+    'classes_sidebar_nav' => 'sidebar-dark-teal',
     'classes_topnav' => 'navbar-white navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
@@ -246,7 +247,7 @@ return [
             'text' => 'home',
             'url'  => '/home',
             'icon'=> 'fas fa-fw fa-home',
-        ],
+        ], /*Final da home*/
         [
             'text' => 'contracts and agreements',
             'url'  => '/contratos',
@@ -262,26 +263,17 @@ return [
                     'url'  => 'contratos',
                     'icon'=> 'fa solid fa-border-all',
                 ],
-                [
-                    'text' => 'Outra 2',
-                    'url'  => '#',
-                    'icon'=> 'fas -solid fa-plus',
-                ],
-                [
-                    'text' => 'Outra 3',
-                    'url'  => '#',
-                    'icon'=> 'fas -solid fa-plus',
-                ],
+               
 
         ]
-    ], // Final do menu contratos
+    ],  /*Final de contratos */
         [
             'text' => 'Human Resources',
             'url'  => '#',
             'icon' => 'fas fa-fw fa-lock',
             'submenu' => [
                 [
-                    'text' => 'Adicionar ',
+                    'text' => 'include human resources',
                     'url'  => '/incluirfuncionario',
                     'icon' => 'fas solid fa-plus',
                 ],
@@ -307,7 +299,7 @@ return [
                 [
                     'text' => 'view_all_material_resources',
                     'url'  => '/patrimonios',
-                    'icon'=> 'fas -solid fa-plus',
+                    'icon'=> 'fa solid fa-border-all',
                 ],
                
             ]
@@ -316,11 +308,25 @@ return [
             'text'        => 'per diems and tickets',
             'url'         => '#',
             'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            /*'label'       => 4,
+            'label_color' => 'success',*/
+            'submenu' => [
+               
+                [
+                    'text' => 'include per diems and tickets',
+                    'url'  => '/incluirdiariasepassagens',
+                    'icon'=> 'fas -solid fa-plus',
+                ],
+                [
+                    'text' => 'view all per diems and tickets',
+                    'url'  => '/diariasepassagens',
+                    'icon'=> 'fa solid fa-border-all',
+                ],
+               
+            ]
         ],
-        ['header' => 'Material resources and heritage'],
-        [
+        /* ['header' => 'Material resources and heritage'], */
+     /*   [
             'text' => 'profile',
             'url'  => 'admin/settings',
             'icon' => '',
@@ -383,7 +389,7 @@ return [
             'text'       => 'information',
             'icon_color' => 'cyan',
             'url'        => '#',
-        ],
+        ], */
     ],
 
     /*

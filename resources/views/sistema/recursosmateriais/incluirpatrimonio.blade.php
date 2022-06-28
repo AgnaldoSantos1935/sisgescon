@@ -50,11 +50,9 @@
 
 @section('css')
 <link rel="stylesheet" href="vendor/fontawesome-free/css/fontawesome.css">
+
 <link rel="stylesheet" href="vendor/datatables/css/dataTables.bootstrap4.css">
-    
-    
-    <link rel="stylesheet" href="{{url(mix ('css/app.css'))}}">
-    
+        
 @stop
 
 @section('js')
@@ -62,7 +60,5 @@
 <Script type="text/javascript" src="vendor/bootstrap/js/bootstrap.js"></Script>
 <Script type="text/javascript" src="vendor/datatables/js/jquery.dataTables.js"></Script>
 <Script type="text/javascript" src="vendor/datatables/js/dataTables.bootstrap4.js"></Script>
-<script type="text/javascript" src="{{url(mix('js/app.js'))}}"></script>  
-
 
 @stop

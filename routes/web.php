@@ -25,3 +25,5 @@ Route::get('/incluirfuncionario', [App\Http\controllers\FuncionarioController::c
 Route::get('/funcionarios', [App\Http\controllers\FuncionarioController::class,'index'])->name('funcionarios');
 Route::get('/incluirPatrimonio', [App\Http\controllers\PatrimonioController::class,'create'])->name('incluirpatrimonio');
 Route::get('/patrimonios', [App\Http\controllers\PatrimonioController::class,'index'])->name('patrimonio');
+Route::get('/incluirdiariasepassagens', [App\Http\controllers\DiariasePassagensController::class,'create'])->name('incluirdiariasepassagens');
+Route::get('/diariasepassagens', [App\Http\controllers\DiariasePassagensController::class,'index'])->name('diariasepassagens');
