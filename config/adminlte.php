@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'Sisge',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -282,7 +282,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Adicionar ',
-                    'url'  => 'incluircontrato',
+                    'url'  => '/incluirfuncionario',
                     'icon' => 'fas solid fa-plus',
                 ],
                 [
@@ -301,12 +301,12 @@ return [
                
                 [
                     'text' => 'include',
-                    'url'  => '#',
+                    'url'  => '/incluirPatrimonio',
                     'icon'=> 'fas -solid fa-plus',
                 ],
                 [
                     'text' => 'view_all_material_resources',
-                    'url'  => '#',
+                    'url'  => '/patrimonios',
                     'icon'=> 'fas -solid fa-plus',
                 ],
                

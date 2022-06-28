@@ -16,7 +16,7 @@ class ContratoController extends Controller
     {
         $contratos = Contrato::all();
         
-        return view('contratos', compact('contratos')); //Passagem de array de contratos para a visão CONTRATOS
+        return view('sistema.contratos.contratos', compact('contratos')); //Passagem de array de contratos para a visão CONTRATOS
     }
 
     /**
@@ -26,7 +26,7 @@ class ContratoController extends Controller
      */
     public function create()
     {
-        return view('incluirctt'); //chama a visão CONTRATOS        
+        return view('sistema.contratos.incluirctt'); //chama a visão CONTRATOS        
     }
 
 

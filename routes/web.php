@@ -23,3 +23,5 @@ Route::get('/contratos', [App\Http\controllers\ContratoController::class,'index'
 Route::get('/incluircontrato', [App\Http\controllers\ContratoController::class,'create'])->name('incluircontrato');
 Route::get('/incluirfuncionario', [App\Http\controllers\FuncionarioController::class,'create'])->name('incluirfuncionario');
 Route::get('/funcionarios', [App\Http\controllers\FuncionarioController::class,'index'])->name('funcionarios');
+Route::get('/incluirPatrimonio', [App\Http\controllers\PatrimonioController::class,'create'])->name('incluirpatrimonio');
+Route::get('/patrimonios', [App\Http\controllers\PatrimonioController::class,'index'])->name('patrimonio');

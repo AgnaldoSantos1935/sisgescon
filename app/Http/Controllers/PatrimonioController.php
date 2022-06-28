@@ -14,7 +14,8 @@ class PatrimonioController extends Controller
      */
     public function index()
     {
-        //
+    $patrimonios = Patrimonio::All();
+    return view('sistema.recursosmateriais.exibepatrimonio', compact('patrimonios')); //Passagem de array de contratos para a visão CONTRATOS
     }
 
     /**
@@ -24,7 +25,7 @@ class PatrimonioController extends Controller
      */
     public function create()
     {
-        //
+    return view ('sistema.recursosmateriais.incluirpatrimonio');
     }
 
     /**

@@ -11,7 +11,7 @@ class FuncionarioController extends Controller
     {
         $funcionarios = Funcionario::all();
         
-        return view('exibefuncionarios', compact('funcionarios')); //Passagem de array de contratos para a visão CONTRATOS
+        return view('sistema.pessoal.exibefuncionarios', compact('funcionarios')); //Passagem de array de contratos para a visão CONTRATOS
     }
 
     /**
@@ -21,6 +21,6 @@ class FuncionarioController extends Controller
      */
     public function create()
     {
-        return view('novofuncionario'); //chama a visão CONTRATOS        
+        return view('sistema.pessoal.novofuncionario'); //chama a visão CONTRATOS        
     }
 }

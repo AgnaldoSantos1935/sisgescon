@@ -13,7 +13,7 @@ class CreatePatrimonio extends Migration
      */
     public function up()
     {
-        Schema::create('patrimonio', function (Blueprint $table) {
+        Schema::create('patrimonios', function (Blueprint $table) {
             $table->id();
             $table->string('nomeobjeto');
             $table->string('serial');
