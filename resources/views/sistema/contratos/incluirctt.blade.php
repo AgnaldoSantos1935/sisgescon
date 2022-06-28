@@ -7,16 +7,16 @@
 @stop
 
 @section('content')
-<div class="card card-primary">
+<div class="card card-info ">
 <div class="card-header">
-<h3 class="card-title">Quick Example</h3>
+<h3 class="card-title ">Dados do contrato</h3>
 </div>
 
 <form>
 <div class="card-body">
 <div class="form-group">
-<label for="exampleInputEmail1">Email address</label>
-<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+<label for="numeroctt">Número</label>
+<input type="text" class="form-control" id="numeroctt" placeholder="Número do instrumento" max="2">
 </div>
 <div class="form-group">
 <label for="exampleInputPassword1">Password</label>

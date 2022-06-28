@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePatrimonio extends Migration
+class Patrimonios extends Migration
 {
     /**
      * Run the migrations.
@@ -36,6 +36,6 @@ class CreatePatrimonio extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('patrimonio');
+        Schema::dropIfExists('patrimonios');
     }
 }
