@@ -12,21 +12,21 @@
 <table id="tabela" class="table table-bordered table-hover dataTable dtr-inline"  style="width:100%">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>contratada</th>
-                        <th>cnpjcontratada</th>
-                        <th>numero</th>
+                        <th>Número</th>
                         <th>ano</th>
+                        <th>Contratada</th>
+                        <th>Objeto</th>
+                        <th>Fiscal</th>
                     </tr>
                 </thead>
                 <tbody>
                 @foreach($contratos as $key => $emp)
                     <tr>
-                        <td>{{ $emp->id }}</td>
-                        <td>{{ $emp->contratada }}</td>
-                        <td>{{ $emp->cnpjcontratada }}</td>
                         <td>{{ $emp->numero }}</td>
                         <td>{{ $emp->ano }}</td>
+                        <td>{{ $emp->contratada }}</td>
+                        <td>{{ $emp->objeto }}</td>
+                        <td>{{ $emp->fiscal }}</td>
                         <!-- we will also add show, edit, and delete buttons -->
                         <!-- <td> -->
  

@@ -16,32 +16,49 @@
 <div class="card-body">
 <div class="form-group">
 <label for="numeroctt">Número</label>
-<input type="text" class="form-control" id="numeroctt" placeholder="Número do instrumento" max="2">
+<input type="text" class="form-control" id="numeroctt" placeholder="Número do instrumento" maxlength="6">
 </div>
 <div class="form-group">
-<label for="exampleInputPassword1">Password</label>
-<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+<label for="anoctt">Ano</label>
+<input type="text" class="form-control" id="anoctt" placeholder="2023" maxlength="4">
 </div>
 <div class="form-group">
-<label for="exampleInputFile">File input</label>
+<label for="copiactt">Anexar cópia do instrumento</label>
 <div class="input-group">
 <div class="custom-file">
-<input type="file" class="custom-file-input" id="exampleInputFile">
-<label class="custom-file-label" for="exampleInputFile">Choose file</label>
+<input type="file" class="custom-file-input" id="anexoctt">
+<label class="custom-file-label" for="anexoctt">Escolher arquivo pdf</label>
 </div>
 <div class="input-group-append">
 <span class="input-group-text">Upload</span>
 </div>
 </div>
 </div>
-<div class="form-check">
-<input type="checkbox" class="form-check-input" id="exampleCheck1">
-<label class="form-check-label" for="exampleCheck1">Check me out</label>
-</div>
+<div class="form-group">
+<label for="contratadactt">Contratada</label>
+<input type="text" class="form-control" id="contratadactt">
 </div>
 
+<div class="form-group">
+<label for="objetoctt">Objeto</label>
+<input type="text" class="form-control" id="objetoctt">
+</div>
+<div class="form-group">
+<label for="dtvigenciactt">Data de vigência</label>
+<input type="date" class="form-control" id="dtvigenciactt">
+</div>
+<div class="form-group">
+<label for="objetoctt">Objeto</label>
+<textarea type="text" rows="3" class="form-control" id="objetoctt"></textarea>
+</div>
+<div class="form-group">
+<label for="cnpjctt">CNPJ Contratada</label>
+<input type="text" class="form-control" id="cnpjctt">
+</div>
+
+
 <div class="card-footer">
-<button type="submit" class="btn btn-primary">Submit</button>
+<button type="submit" class="btn btn-primary">Enviar</button>
 </div>
 </form>
 </div>
