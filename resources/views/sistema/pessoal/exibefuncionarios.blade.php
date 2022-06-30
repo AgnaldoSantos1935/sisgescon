@@ -3,50 +3,33 @@
 @section('title', 'Sisge || Home')
 
 @section('content_header')
-    <h1>Exibindo Contratos</h1>
+    <h1>Exibindo Funcionários</h1>
 @stop
 
 @section('content')
-<table id="tabela" class="table table-bordered table-hover"  style="width:100%">
+<table id="tabelafuncionarios" class="table table-bordered table-hover dataTable dtr-inline"  style="width:100%">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>contratada</th>
-                        <th>cnpjcontratada</th>
-                        <th>numero</th>
-                        <th>ano</th>
+                        <th>Nome</th>
+                        <th>Matrícula</th>
+                        <th>Cargo</th>
+                        <th>Setor</th>
+                        <th>Data de admissão</th>
                     </tr>
                 </thead>
                 <tbody>
                 @foreach($funcionarios as $key => $emp)
                     <tr>
-                        <td>{{ $emp->id }}</td>
-                        <td>{{ $emp->contratada }}</td>
-                        <td>{{ $emp->cnpjcontratada }}</td>
-                        <td>{{ $emp->numero }}</td>
-                        <td>{{ $emp->ano }}</td>
-                        <!-- we will also add show, edit, and delete buttons -->
-                        <td>
- 
-                            <!-- show the nerd (uses the show method found at GET /nerds/{id} -->
-                            <a class="btn btn-primary" id="btn_table1" href="{{ URL::to('contratos_detalhes/' . $emp->id) }}" role="button">Detalhes</a>
-                                
-                            <!-- edit this nerd (uses the edit method found at GET /nerds/{id}/edit -->
-                            <a class="btn btn-primary" id="btn_table2" href="{{ URL::to('contratos_novo/' . $emp->id . '/editar')}}" role="button"> Editar </a>
-                            
-                        </td>
+                        <td>{{ $emp->nome }}</td>
+                        <td>{{ $emp->matricula }}</td>
+                        <td>{{ $emp->cargo }}</td>
+                        <td>{{ $emp->setor }}</td>
+                        <td>{{ $emp->dtadmissao }}</td>
+                     
                     </tr>
                 @endforeach
                 </tbody>
-                <tfoot>
-                    <tr>
-                        <th>ID</th>
-                        <th>contratada</th>
-                        <th>cnpjcontratada</th>
-                        <th>numero</th>
-                        <th>ano</th>
-                    </tr>
-                </tfoot>
+                
             </table>
 
 
@@ -60,9 +43,21 @@
 @stop
 
 @section('js')
-<Script type="text/javascript" src="vendor/jquery/jquery.js"></Script>
-<Script type="text/javascript" src="vendor/bootstrap/js/bootstrap.js"></Script>
-<Script type="text/javascript" src="vendor/datatables/js/jquery.dataTables.js"></Script>
-<Script type="text/javascript" src="vendor/datatables/js/dataTables.bootstrap4.js"></Script>
+<script src="vendor/jquery/jquery.min.js"></script>
 
+<script src="vendor/datatables/js/jquery.dataTables.js"></script>
+<script>
+    $(document).ready (function(){
+    $('#tabelafuncionarios').DataTable({
+            "paging": true,
+            "lenghtChange": true,
+            "searching": true,
+            "ordering": true,
+            "info": true,
+            "autoWidth": true, 
+            "responsive": true,
+
+    });
+});
+</script>
 @stop

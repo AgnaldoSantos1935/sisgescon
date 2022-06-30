@@ -45,12 +45,12 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo' => '<b>Sis</b>Gesco',
+    'logo_img' => 'vendor/adminlte/dist/img/s.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'AdminLTE',
+    'logo_img_alt' => 'SisGesco',
 
     /*
     |--------------------------------------------------------------------------
@@ -102,7 +102,7 @@ return [
     |
     */
 
-    'classes_auth_card' => 'card-outline card-primary',
+    'classes_auth_card' => 'card-outline card-success',
     'classes_auth_header' => '',
     'classes_auth_body' => '',
     'classes_auth_footer' => '',
@@ -251,17 +251,17 @@ return [
         [
             'text' => 'contracts and agreements',
             'url'  => '/contratos',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fa solid fa-file-contract',
             'submenu' => [
                 [
                     'text' => 'Adicionar ',
                     'url'  => 'incluircontrato',
-                    'icon' => 'fas solid fa-plus',
+                    'icon_color' => 'red',
                 ],
                 [
                     'text' => 'view all contracts',
                     'url'  => 'contratos',
-                    'icon'=> 'fa solid fa-border-all',
+                    'icon_color' => 'red',
                 ],
                
 
@@ -270,17 +270,17 @@ return [
         [
             'text' => 'Human Resources',
             'url'  => '#',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fa solid fa-users',
             'submenu' => [
                 [
                     'text' => 'include human resources',
                     'url'  => '/incluirfuncionario',
-                    'icon' => 'fas solid fa-plus',
+                    'icon_color' => 'red',
                 ],
                 [
                     'text' => 'view all employes',
                     'url'  => 'funcionarios',
-                    'icon'=> 'fa solid fa-border-all',
+                    'icon_color' => 'red',
                 ],
         ] 
 
@@ -288,18 +288,18 @@ return [
         [
             'text'    => 'Material resources and heritage',
             'icon'    => 'fas fa-fw fa-share',
-            'icon'=> 'far fa-fw fa-file',
+            'icon'=> 'fa solid fa-list',
             'submenu' => [
                
                 [
                     'text' => 'include',
                     'url'  => '/incluirPatrimonio',
-                    'icon'=> 'fas -solid fa-plus',
+                    'icon_color' => 'red',
                 ],
                 [
                     'text' => 'view_all_material_resources',
                     'url'  => '/patrimonios',
-                    'icon'=> 'fa solid fa-border-all',
+                    'icon_color' => 'red',
                 ],
                
             ]
@@ -307,7 +307,7 @@ return [
         [
             'text'        => 'per diems and tickets',
             'url'         => '#',
-            'icon'        => 'far fa-fw fa-file',
+            'icon'        => 'fa solid fa-map',
             /*'label'       => 4,
             'label_color' => 'success',*/
             'submenu' => [
@@ -315,16 +315,59 @@ return [
                 [
                     'text' => 'include per diems and tickets',
                     'url'  => '/incluirdiariasepassagens',
-                    'icon'=> 'fas -solid fa-plus',
+                    'icon_color' => 'red',
                 ],
                 [
                     'text' => 'view all per diems and tickets',
                     'url'  => '/diariasepassagens',
-                    'icon'=> 'fa solid fa-border-all',
+                    'icon_color' => 'red',
                 ],
                
             ]
-        ],
+        ],// Final do menu diárias e passagens
+        [
+            'text'        => 'tasks',
+            'url'         => '#',
+            'icon'        => 'fa solid fa-thumbtack',
+            /*'label'       => 4,
+            'label_color' => 'success',*/
+            'submenu' => [
+               
+                [
+                    'text' => 'show tasks',
+                    'url'  => '/tarefas',
+                    'icon_color' => 'red',
+                ],
+                [
+                    'text' => 'include task',
+                    'url'  => '/incluirtarefa',
+                    'icon_color' => 'red',
+                ],
+               
+            ]
+        ],// Final do menu tarefas
+        [
+            'text'        => 'financial moviment',
+            'url'         => '#',
+            'icon'        => 'fas solid fa-cash-register',
+            /*'label'       => 4,
+            'label_color' => 'success',*/
+            'submenu' => [
+               
+                [
+                    'text' => 'display motion',
+                    'url'  => '/movimentofinanceiro',
+                    'icon_color' => 'red',
+                ],
+                [
+                    'text' => 'include movement',
+                    'url'  => '/incluirmoviment',
+                    'icon_color' => 'red',
+                ],
+               
+            ]
+        ],// Final do menu tarefas
+
         /* ['header' => 'Material resources and heritage'], */
      /*   [
             'text' => 'profile',

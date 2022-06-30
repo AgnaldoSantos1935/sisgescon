@@ -27,3 +27,5 @@ Route::get('/incluirPatrimonio', [App\Http\controllers\PatrimonioController::cla
 Route::get('/patrimonios', [App\Http\controllers\PatrimonioController::class,'index'])->name('patrimonio');
 Route::get('/incluirdiariasepassagens', [App\Http\controllers\DiariasePassagensController::class,'create'])->name('incluirdiariasepassagens');
 Route::get('/diariasepassagens', [App\Http\controllers\DiariasePassagensController::class,'index'])->name('diariasepassagens');
+Route::get('/incluirtarefa', [App\Http\controllers\TarefaController::class,'create'])->name('incluirtarefa');
+Route::get('/tarefas', [App\Http\controllers\TarefaController::class,'index'])->name('tarefas');

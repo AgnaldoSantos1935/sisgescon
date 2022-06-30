@@ -30,6 +30,11 @@
         {{-- Configured Stylesheets --}}
         @include('adminlte::plugins', ['type' => 'css'])
 
+        <link rel="stylesheet" href="vendor/adminlte/dist/css/adminlte.css">
+<link rel="stylesheet" href="vendor/fontawesome-free/css/fontawesome.css">
+
+<link rel="stylesheet" href="vendor/datatables/css/dataTables.bootstrap4.css">
+
         <link rel="stylesheet" href="{{ asset('vendor/adminlte/dist/css/adminlte.min.css') }}">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     @else
@@ -103,7 +108,14 @@
 
     {{-- Custom Scripts --}}
     @yield('adminlte_js')
-	
+<footer class="main-footer">
+<div class="float-right d-none d-sm-block">
+<b>Versão</b> 1.0.0
+</div>
+<strong>Copyright &copy; 2022 <a href="#">Sistema de Gestão</a>.</strong> Todos os direitos reservados.
+</footer>
+
+
 </body>
 
 </html>

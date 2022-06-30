@@ -9,24 +9,24 @@
 @stop
 
 @section('content')
-<table id="tabela" class="table table-bordered table-hover dataTable dtr-inline"  style="width:100%">
+<table id="tabela.tarefas" class="table table-bordered table-hover dataTable dtr-inline"  style="width:100%">
                 <thead>
                     <tr>
-                        <th>Número</th>
-                        <th>ano</th>
-                        <th>Contratada</th>
-                        <th>Objeto</th>
-                        <th>Fiscal</th>
+                        <th>Nome</th>
+                        <th>Inicio</th>
+                        <th>Metas</th>
+                        <th>Designado</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
-                @foreach($contratos as $key => $emp)
+                @foreach($tarefas as $key => $emp)
                     <tr>
-                        <td>{{ $emp->numero }}</td>
-                        <td>{{ $emp->ano }}</td>
-                        <td>{{ $emp->contratada }}</td>
-                        <td>{{ $emp->objeto }}</td>
-                        <td>{{ $emp->fiscal }}</td>
+                        <td>{{ $emp->nome }}</td>
+                        <td>{{ $emp->dtinicio }}</td>
+                        <td>{{ $emp->metas }}</td>
+                        <td>{{ $emp->designado }}</td>
+                        <td>{{ $emp->status }}</td>
                         <!-- we will also add show, edit, and delete buttons -->
                         <!-- <td> -->
  
@@ -57,7 +57,7 @@
 <script src="vendor/datatables/js/jquery.dataTables.js"></script>
 <script>
     $(document).ready (function(){
-    $('#tabela').DataTable({
+    $('#tabela.tarefas').DataTable({
             "paging": true,
             "lenghtChange": true,
             "searching": true,

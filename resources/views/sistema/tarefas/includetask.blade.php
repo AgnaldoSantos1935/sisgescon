@@ -56,6 +56,7 @@
 <input type="text" class="form-control" id="cnpjctt" maxlength="18">
 </div>
 
+
 <div class="card-footer">
 <button type="submit" class="btn btn-primary">Enviar</button>
 </div>
