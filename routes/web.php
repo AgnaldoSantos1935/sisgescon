@@ -29,3 +29,7 @@ Route::get('/incluirdiariasepassagens', [App\Http\controllers\DiariasePassagensC
 Route::get('/diariasepassagens', [App\Http\controllers\DiariasePassagensController::class,'index'])->name('diariasepassagens');
 Route::get('/incluirtarefa', [App\Http\controllers\TarefaController::class,'create'])->name('incluirtarefa');
 Route::get('/tarefas', [App\Http\controllers\TarefaController::class,'index'])->name('tarefas');
+
+Route::get('/bi_contratos', function(){
+    return view('sistema.businnesinteligence.bi_contratos');
+});

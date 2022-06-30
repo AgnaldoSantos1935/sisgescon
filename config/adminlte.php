@@ -248,6 +248,9 @@ return [
             'url'  => '/home',
             'icon'=> 'fas fa-fw fa-home',
         ], /*Final da home*/
+        ['header' => ''],
+        ['header' => 'available options'],
+        ['header' => ''],
         [
             'text' => 'contracts and agreements',
             'url'  => '/contratos',
@@ -367,7 +370,33 @@ return [
                
             ]
         ],// Final do menu tarefas
+        ['header' => ''],
+        ['header' => 'business intelligence'],
+        ['header' => ''],
 
+        [
+            'text'        => 'b.i contracts and agreements',
+            'url'         => '/bi_contratos',
+            'icon'        => 'fa solid fa-chart-pie',
+        ], // Final do menu businnes intelligence 1
+        [
+                    'text' => 'b.i human resources',
+                    'url'  => '#',
+                    'icon'        => 'fa solid fa-chart-pie',
+               
+        ],// Final do menu businnes intelligence 2
+        [
+            'text' => 'b.i per diems and tickets',
+            'url'  => '#',
+            'icon'        => 'fa solid fa-chart-pie',
+       
+],// Final do menu businnes intelligence 2
+[
+    'text' => 'b.i material resources and heritage',
+    'url'  => '#',
+    'icon'        => 'fa solid fa-chart-pie',
+
+],// Final do menu businnes intelligence 2
         /* ['header' => 'Material resources and heritage'], */
      /*   [
             'text' => 'profile',
