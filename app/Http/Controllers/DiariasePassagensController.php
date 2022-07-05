@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\DiariasePassagens;
+use App\Models\Funcionario;
 use Illuminate\Http\Request;
 
 class DiariasePassagensController extends Controller
@@ -15,8 +16,9 @@ class DiariasePassagensController extends Controller
     public function index()
     {
         $diariasepassagens = DiariasePassagens::all();
+        $funcionarios = Funcionario::all();
         
-        return view('sistema.diariasepassagens.diariasepassagens', compact('diariasepassagens')); //Passagem de array de diarias para a visão DIARIAS E PASSAGENS
+        return view('sistema.diariasepassagens.diariasepassagens', compact('diariasepassagens', 'funcionarios')); //Passagem de array de diarias para a visão DIARIAS E PASSAGENS
     }
 
     /**

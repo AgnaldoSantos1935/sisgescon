@@ -10,35 +10,30 @@
 <table id="tabela" class="table table-bordered table-hover"  style="width:100%">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>contratada</th>
-                        <th>cnpjcontratada</th>
-                        <th>numero</th>
-                        <th>ano</th>
+                    <!-- <th>Id</th> -->
+                        <th>Favorecido</th>
+                        <th>PRD/Despesa</th>
+                        <th>Ano</th>
+                        <th>Itnerário</th>
+                        <th>Retorno</th>
                     </tr>
                 </thead>
                 <tbody>
                 @foreach($diariasepassagens as $key => $emp)
+                @foreach($funcionarios as $key => $fun)
                     <tr>
-                        <td>{{ $emp->id }}</td>
-                        <td>{{ $emp->contratada }}</td>
-                        <td>{{ $emp->cnpjcontratada }}</td>
-                        <td>{{ $emp->numero }}</td>
+                        <!--<td>{{ $emp->id }}</td>-->
+                        <td>{{ $fun->nome }}</td>
+                        <td>{{ $emp->numeroprd }}</td>
                         <td>{{ $emp->ano }}</td>
-                        <!-- we will also add show, edit, and delete buttons -->
-                        <td>
- 
-                            <!-- show the nerd (uses the show method found at GET /nerds/{id} -->
-                            <a class="btn btn-primary" id="btn_table1" href="{{ URL::to('contratos_detalhes/' . $emp->id) }}" role="button">Detalhes</a>
-                                
-                            <!-- edit this nerd (uses the edit method found at GET /nerds/{id}/edit -->
-                            <a class="btn btn-primary" id="btn_table2" href="{{ URL::to('contratos_novo/' . $emp->id . '/editar')}}" role="button"> Editar </a>
-                            
-                        </td>
+                        <td>{{ $emp->itnerario }}</td>
+                        <td>{{ $emp->dtchegada}}</td>
+
                     </tr>
                 @endforeach
+                @endforeach
                 </tbody>
-                <tfoot>
+               <!-- <tfoot>
                     <tr>
                         <th>ID</th>
                         <th>contratada</th>
@@ -46,7 +41,7 @@
                         <th>numero</th>
                         <th>ano</th>
                     </tr>
-                </tfoot>
+                </tfoot> -->
             </table>
 
 
@@ -62,9 +57,22 @@
 @stop
 
 @section('js')
-<Script type="text/javascript" src="vendor/jquery/jquery.js"></Script>
-<Script type="text/javascript" src="vendor/bootstrap/js/bootstrap.js"></Script>
-<Script type="text/javascript" src="vendor/datatables/js/jquery.dataTables.js"></Script>
-<Script type="text/javascript" src="vendor/datatables/js/dataTables.bootstrap4.js"></Script>
+@section('js')
+<script src="vendor/jquery/jquery.min.js"></script>
 
+<script src="vendor/datatables/js/jquery.dataTables.js"></script>
+<script>
+    $(document).ready (function(){
+    $('#tabela').DataTable({
+            "paging": true,
+            "lenghtChange": true,
+            "searching": true,
+            "ordering": true,
+            "info": true,
+            "autoWidth": true, 
+            "responsive": true,
+
+    });
+});
+</script>
 @stop
