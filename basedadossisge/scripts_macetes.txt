@@ -1,9 +1,13 @@
 * select join {
 SELECT diariase_passagens.id,numeroprd,ano,itnerario,nome,dtchegada FROM diariase_passagens inner join funcionarios ON diariase_passagens.favorecido=funcionarios.id;
 
+SELECT contratos.ano, licitacaos.objeto from contratos inner join licitacaos on contratos.contratada=id;
+SELECT contratos.ano, licitacaos.objeto from contratos inner join licitacaos ON contratos.licitacao = licitacaos.codlicitacao;
+
 }
 
 * push local para remoto {
    git push -u https://github.com/AgnaldoSantos1935/sisgescon.git
 
 }
+

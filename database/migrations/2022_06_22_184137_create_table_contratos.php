@@ -18,13 +18,12 @@ class CreateTableContratos extends Migration
             $table->string('numero');
             $table->string('ano');
             $table->timestamp('dt_insercao')->nullable();
-            $table->string('contratada');
+            $table->integer('contratada');
             $table->string('objeto');
             $table->string('dtvigencia');
             $table->string('cnpjcontratada');
-            $table->string('fiscal');
-            $table->string('modalidadelicitacao');
-            $table->string('numerolicitacao');
+            $table->integer('fiscal');
+            $table->integer('licitacao');
             $table->timestamps();
        });
     }
